@@ -1,11 +1,17 @@
 #!/usr/bin/env sh
 
-if gem list --no-installed --exact --silent foreman; then
+if ! gem list --installed foreman > /dev/null 2>&1; then
   echo "Installing foreman..."
   gem install foreman
 fi
 
-# Default to port 3000 if not specified
+# 古いPumaサーバーのプロセスを停止
+if [ -f tmp/pids/server.pid ]; then
+  echo "Removing old server PID file..."
+  rm tmp/pids/server.pid
+fi
+
+# Default to port 3001 if not specified
 export PORT="${PORT:-3001}"
 
 exec foreman start -f Procfile.dev "$@"
