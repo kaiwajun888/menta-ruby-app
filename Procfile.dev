@@ -1,2 +1,2 @@
-web: env RUBY_DEBUG_OPEN=true bin/rails server
-css: yarn build:css --watch
+web: PORT=3001 bundle exec puma -C config/puma.rb
+css: yarn run tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify --watch
