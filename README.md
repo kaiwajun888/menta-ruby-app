@@ -2,11 +2,11 @@
 
 ### リポジトリをforkする
 
-![スクリーンショット 2024-07-03 10.19.21.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1dafa421-b4b7-4486-9877-aa981cfa6dab/241677b2-886b-428c-8b59-e0102b85f4f1/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2024-07-03_10.19.21.png)
+<img width="1427" alt="スクリーンショット 2024-07-03 10 19 21" src="https://github.com/user-attachments/assets/40bc1411-d494-43f1-b13e-8bf010b5a836">
 
 画面右上の「Fork」をクリックします
 
-![スクリーンショット 2024-07-03 10.24.16.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1dafa421-b4b7-4486-9877-aa981cfa6dab/d1c1ef79-59dd-4316-9de8-b681edc42589/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2024-07-03_10.24.16.png)
+<img width="1429" alt="スクリーンショット 2024-07-03 10 24 16" src="https://github.com/user-attachments/assets/1ff41ebb-85e0-4bab-9baa-48370a457f5a">
 
 「Create a new fork」画面が表示されます。以下項目を適宜入力・選択し、「Create fork」をクリックして下さい。
 
@@ -22,7 +22,7 @@
 
 フォークしたリポジトリを、ローカルのPCへクローン（コピー）して編集できるようにしましょう。
 
-![スクリーンショット 2024-07-03 10.34.46.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1dafa421-b4b7-4486-9877-aa981cfa6dab/e60f1c06-6150-4edd-9545-d44a8c74e409/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2024-07-03_10.34.46.png)
+<img width="1428" alt="スクリーンショット 2024-07-03 10 34 46" src="https://github.com/user-attachments/assets/dc285818-0c2a-4869-bcf2-57949f8c9500">
 
 フォークしたリポジトリで`Code`をクリック
 
@@ -54,7 +54,7 @@ docker-compose up
 
 エラー画面が表示されますが、`Create database`をクリックすればOKです
 
-![スクリーンショット 2024-07-03 9.15.18.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1dafa421-b4b7-4486-9877-aa981cfa6dab/e207102b-cede-4706-be6f-c967605b7d74/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2024-07-03_9.15.18.png)
+<img width="1428" alt="スクリーンショット 2024-07-03 9 15 18" src="https://github.com/user-attachments/assets/377ff927-d39e-4e5b-bfd3-d8da074e1fec">
 
 画面の確認(完成品)
 
