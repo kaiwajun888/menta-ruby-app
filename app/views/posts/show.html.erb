@@ -1,0 +1,17 @@
+<div class="container mx-auto mt-8" style="width: 80%;">
+  <div class="card bg-white shadow-xl rounded-3xl p-8">
+    <h1 class="text-4xl font-bold mb-6 text-center text-blue-600"><%= @post.title %></h1>
+    <div class="prose lg:prose-xl mb-6 text-lg">
+      <p><%= @post.body %></p>
+    </div>
+    <div class="text-sm text-gray-500 mb-4 flex justify-between">
+      <div class="text-left">
+        <p>Posted by: <span class="font-semibold"><%= @post.user.email %></span></p>
+        <p>Created at: <%= @post.created_at.strftime("%Y-%m-%d %H:%M:%S") %></p>
+      </div>
+    </div>
+    <div class="flex justify-end">
+      <%= link_to '戻る', posts_path, class: 'btn btn-primary' %>
+    </div>
+  </div>
+</div>

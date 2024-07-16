@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :require_login, only: [:new, :create]
-  
+
   def index
     @posts = Post.order(created_at: :desc)
   end
@@ -16,6 +16,10 @@ class PostsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @post = Post.find(params[:id])
   end
 
   private
