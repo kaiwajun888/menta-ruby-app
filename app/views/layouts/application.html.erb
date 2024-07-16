@@ -14,6 +14,9 @@
     <%= render 'layouts/header' %>
 
     <div class="flex-grow container mx-auto mt-8 min-h-[500px]">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
       <%= yield %>
     </div>
 
