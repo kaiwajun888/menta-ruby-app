@@ -4,6 +4,7 @@
     <div>
       <% if logged_in? %>
         <span class="text-white mx-2"><%= current_user.email %></span>
+        <%= link_to 'New Post', new_post_path, class: "text-white mx-2" %>
         <%= button_to 'Logout', logout_path, method: :delete, class: "text-white mx-2 bg-transparent border-none cursor-pointer" %>
       <% else %>
         <%= link_to 'Sign Up', new_user_path, class: "text-white mx-2" %>
