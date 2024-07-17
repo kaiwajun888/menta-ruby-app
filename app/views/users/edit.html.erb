@@ -1,0 +1,21 @@
+<!-- app/views/users/edit.html.erb -->
+<div class="container mx-auto mt-8" style="width: 80%;">
+  <h1 class="text-3xl font-bold mb-6 text-center">プロフィール編集</h1>
+  <div class="bg-white shadow-md rounded-xl p-6">
+    <%= form_with(model: @user, local: true, class: "space-y-4") do |form| %>
+      <% if @user.errors.any? %>
+        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-6">
+          <strong class="font-bold"><%= pluralize(@user.errors.count, "エラー") %>が発生しました:</strong>
+          <span class="block sm:inline"><%= @user.errors.full_messages.join(", ") %></span>
+        </div>
+      <% end %>
+      <div>
+        <%= form.label :avatar, "プロフィール画像", class: "block text-gray-700" %>
+        <%= form.file_field :avatar, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" %>
+      </div>
+      <div class="text-center">
+        <%= form.submit 'プロフィールを更新', class: "w-full bg-indigo-600 text-white py-2 px-4 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" %>
+      </div>
+    <% end %>
+  </div>
+</div>
