@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
-  before_action :require_login, only: [:new, :create, :edit, :update]
-  before_action :set_post, only: [:edit, :update]
-  before_action :authorize_user, only: [:edit, :update]
+  before_action :require_login, only: [:new, :create, :edit, :update, :destroy]
+  before_action :set_post, only: [:edit, :update, :destroy]
+  before_action :authorize_user, only: [:edit, :update, :destroy]
 
   def index
     @posts = Post.order(created_at: :desc)
@@ -33,6 +33,11 @@ class PostsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @post.destroy
+    redirect_to posts_path, notice: '投稿が削除されました'
   end
 
   private
