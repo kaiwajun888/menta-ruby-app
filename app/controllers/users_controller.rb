@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
+  before_action :require_login, only: [:edit, :update]
   before_action :set_user, only: [:show, :edit, :update]
-  
+
   def new
     @user = User.new
   end
@@ -20,7 +21,6 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = current_user
   end
 
   def update
@@ -32,11 +32,19 @@ class UsersController < ApplicationController
   end
 
   private
+
   def set_user
     @user = User.find(params[:id])
   end
 
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation, :avatar)
+  end
+
+  def require_login
+    unless logged_in?
+      flash[:error] = "ログインが必要です"
+      redirect_to new_session_path
+    end
   end
 end
