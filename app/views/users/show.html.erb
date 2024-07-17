@@ -19,7 +19,7 @@
       </div>
     </div>
     <% if @user != current_user %>
-      <% if current_user.following?(@user) %>
+      <% if current_user && current_user.following?(@user) %>
         <%= button_to 'フォロー中', relationship_path(current_user.active_relationships.find_by(followed_id: @user.id)), method: :delete, class: 'btn btn-danger' %>
       <% else %>
         <%= button_to 'フォローする', relationships_path(followed_id: @user.id), method: :post, class: 'btn btn-primary' %>
