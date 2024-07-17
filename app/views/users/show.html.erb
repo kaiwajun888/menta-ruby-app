@@ -1,5 +1,16 @@
+<!-- app/views/users/show.html.erb -->
 <div class="container mx-auto mt-8" style="width: 80%;">
-  <div class="bg-white shadow-xl rounded-3xl p-8">
+  <div class="bg-white shadow-xl rounded-3xl p-8 relative">
+    <div class="absolute top-4 right-4 flex space-x-4">
+      <div class="text-center">
+        <p class="text-xl font-bold"><%= @user.following_count %></p>
+        <p class="text-gray-600">フォロー中</p>
+      </div>
+      <div class="text-center">
+        <p class="text-xl font-bold"><%= @user.followers_count %></p>
+        <p class="text-gray-600">フォロワー</p>
+      </div>
+    </div>
     <div class="flex items-center mb-6">
       <%= image_tag @user.avatar.url, alt: "Avatar", class: "w-24 h-24 rounded-full bg-gray-200 mr-4" %>
       <div>
@@ -7,6 +18,13 @@
         <p>登録日: <%= @user.created_at.strftime("%Y-%m-%d") %></p>
       </div>
     </div>
+    <% if @user != current_user %>
+      <% if current_user.following?(@user) %>
+        <%= button_to 'フォロー中', relationship_path(current_user.active_relationships.find_by(followed_id: @user.id)), method: :delete, class: 'btn btn-danger' %>
+      <% else %>
+        <%= button_to 'フォローする', relationships_path(followed_id: @user.id), method: :post, class: 'btn btn-primary' %>
+      <% end %>
+    <% end %>
     <h2 class="text-2xl font-semibold mb-4">過去の投稿</h2>
     <div class="space-y-4">
       <% @posts.each do |post| %>
@@ -22,4 +40,3 @@
     </div>
   </div>
 </div>
-
