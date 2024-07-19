@@ -12,11 +12,16 @@
           </div>
         <% end %>
         <div class="flex justify-between items-center mt-4">
-          <div class="like-button">
-            <%= render 'likes/like', post: post %>
+          <div class="flex space-x-2">
+            <div class="like-button">
+              <%= render 'likes/like', post: post %>
+            </div>
+            <div class="comment-button">
+              <%= render 'comments/comment_button', post: post %>
+            </div>
           </div>
           <% if logged_in? && post.user == current_user %>
-            <div class="absolute bottom-4 right-4 space-x-2">
+            <div class="flex space-x-2 absolute bottom-4 right-4">
               <%= link_to '編集', edit_post_path(post), class: 'bg-blue-500 text-white py-3.5 px-4 rounded-lg' %>
               <%= link_to '削除', post_path(post), method: :post, data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？"}, class: 'bg-red-500 text-white py-3.5 px-4 rounded-lg' %>
             </div>

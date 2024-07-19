@@ -10,7 +10,35 @@
         <p>Created at: <%= @post.created_at.strftime("%Y-%m-%d %H:%M:%S") %></p>
       </div>
     </div>
-    <div class="flex justify-end">
+    
+    <!-- コメント表示部分 -->
+    <div class="mt-8">
+      <h2 class="text-2xl font-semibold mb-4">コメント</h2>
+      <% @post.comments.each do |comment| %>
+        <div class="p-4 bg-gray-100 rounded-md shadow mb-4">
+          <p class="text-gray-700"><%= comment.content %></p>
+          <p class="text-sm text-gray-500">Commented by: <%= link_to comment.user.email, user_path(comment.user), class: "text-blue-500 underline" %></p>
+          <p class="text-sm text-gray-500"><%= comment.created_at.strftime("%Y-%m-%d %H:%M:%S") %></p>
+        </div>
+      <% end %>
+    </div>
+
+    <!-- コメントフォーム -->
+    <% if logged_in? %>
+      <div class="mt-8">
+        <%= form_with(model: [ @post, @post.comments.build ], local: true) do |form| %>
+          <div class="mb-4">
+            <%= form.label :content, class: "block text-gray-700" %>
+            <%= form.text_area :content, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" %>
+          </div>
+          <div class="text-center">
+            <%= form.submit 'コメントをする', class: "w-full bg-indigo-600 text-white py-2 px-4 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+
+    <div class="flex justify-end mt-4">
       <%= link_to '戻る', posts_path, class: 'btn btn-primary' %>
     </div>
   </div>
