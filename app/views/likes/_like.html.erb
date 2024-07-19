@@ -1,9 +1,13 @@
 <div id="like_button_<%= post.id %>">
   <% if logged_in? %>
     <% if current_user.likes.find_by(post_id: post.id) %>
-      <%= button_to 'Unlike', like_path(current_user.likes.find_by(post_id: post.id)), method: :delete, remote: true, class: 'bg-red-500 text-white py-2 px-4 rounded-lg' %>
+      <%= button_to like_path(current_user.likes.find_by(post_id: post.id)), method: :delete, remote: true, class: 'bg-transparent' do %>
+        <%= image_tag 'like_icon_filled.svg', class: 'h-6 w-6 text-red-500' %>
+      <% end %>
     <% else %>
-      <%= button_to 'Like', likes_path(post_id: post.id), method: :post, remote: true, class: 'bg-blue-500 text-white py-2 px-4 rounded-lg' %>
+      <%= button_to likes_path(post_id: post.id), method: :post, remote: true, class: 'bg-transparent' do %>
+        <%= image_tag 'like_icon_outline.svg', class: 'h-6 w-6 text-gray-500' %>
+      <% end %>
     <% end %>
   <% end %>
 </div>
