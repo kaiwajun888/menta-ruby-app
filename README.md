@@ -66,7 +66,8 @@ https://github.com/apps/slack
 ### リポジトリへのアクセス権限の設定をする
 
 1. 下記 URL を参考にして’[Kaiwa-Jun](https://github.com/Kaiwa-Jun)’をコラボレーターとして設定してください
-   https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository#inviting-a-team-or-person
+
+https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository#inviting-a-team-or-person
 
 ## 完成状態を確認する
 
@@ -173,7 +174,7 @@ git push origin feature1/skip-unnecessary-files
    3. 上記フォーマットで PR の内容を記述する
    4. `Create pull request`をクリックで PR が作成されます
 
-![スクリーンショット 2024-07-24 1.06.43.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1dafa421-b4b7-4486-9877-aa981cfa6dab/e433dfc7-ec92-4c58-9c27-37fe06512c6d/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2024-07-24_1.06.43.png)
+![スクリーンショット 2024-07-24 1 06 43](https://github.com/user-attachments/assets/30399907-eb8b-4052-b257-2ceddf661153)
 
 PR を私が確認して OK であれば base へマージされます
 
@@ -193,13 +194,11 @@ git pull
 ### 実装中のコードも定期的に最新にしましょう
 
 例えば、、、
-
+```
 step1：実装完了して、PR のレビュー待ち
-
 step2：実装途中
-
 base：step1 がレビュー中なので step1 はマージされていない
-
+```
 この後、step2 の実装途中に step1 のレビューが終わり、base ブランチに step1 の内容がマージされたとします
 
 ここで step2 の内容を step1 の実装内容を取り込んだものにしたいと考えます
