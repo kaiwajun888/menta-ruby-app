@@ -51,7 +51,8 @@ https://github.com/apps/slack
 2. `menta-ruby-app`を選択する
 3. save をクリック
 
-![スクリーンショット 2024-07-23 22.50.08.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1dafa421-b4b7-4486-9877-aa981cfa6dab/08f0721b-cd9d-418e-99f8-c370d51e9b9c/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2024-07-23_22.50.08.png)
+![スクリーンショット 2024-07-23 22 50 08](https://github.com/user-attachments/assets/6b500ddf-b98b-4b93-bd38-a37d4638ffb9)
+
 
 **※ここまでできたら、リポジトリの URL を Slack で共有してください**
 
