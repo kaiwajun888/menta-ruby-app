@@ -1,6 +1,5 @@
 ## 環境構築
-
-### リポジトリを fork する
+### リポジトリをforkする
 
 <img width="1427" alt="スクリーンショット 2024-07-03 10 19 21" src="https://github.com/user-attachments/assets/40bc1411-d494-43f1-b13e-8bf010b5a836">
 
@@ -32,12 +31,14 @@
 
 リポジトリを clone する
 
+
 ```ruby
 git clone 【クローン先のURL】
 
 // 多分下記のようになると思いますので、実行してください
 git clone [git@github.com](mailto:git@github.com):Kaiwa-Jun/menta-ruby-app.git
 ```
+
 
 ## PR 作成を Slack で通知する設定
 
@@ -79,17 +80,20 @@ docker-compose build
 docker-compose up
 ```
 
-ブラウザで`http://localhost:3000/`にアクセスする
 
-エラー画面が表示されますが、`Create database`をクリックすれば OK です
+ブラウザで`http://localhost:3001/`にアクセスする
+
+エラー画面が表示されますが、`Create database`をクリックすればOKです
 
 <img width="1428" alt="スクリーンショット 2024-07-03 9 15 18" src="https://github.com/user-attachments/assets/377ff927-d39e-4e5b-bfd3-d8da074e1fec">
 
 画面の確認(完成品)
 
+
 どんな機能あるか動かしてみてください
 
 ### ブランチを切り替えて課題をスタートする
+
 
 ```ruby
 
@@ -114,6 +118,7 @@ git branch
   develop
 * feature1/skip-unnecessary-files
 ```
+
 
 各課題の番号ごとに README.md があります。課題 1 の場合は README1.md です。
 
@@ -225,3 +230,4 @@ TailwindCSS でのスタイリングがなぜか下記コマンドを実行し�
 ```
 docker-compose exec web yarn run build:css
 ```
+
