@@ -106,11 +106,8 @@ git branch -a
 ```
 
 ```ruby
-# baseブランチにチェックアウトする（このbaseブランチに成果物が集約されていきます）
-git checkout -b base origin/base
-
 # 課題１（feature1/skip-unnecessary-files）にブランチを切り替える例
-git checkout -b feature1/skip-unnecessary-files
+git checkout -b feature1/skip-unnecessary-files origin/feature1/skip-unnecessary-files
 
 # feature1/skip-unnecessary-filesに切り替わっているか確認
 git branch
